@@ -9,5 +9,10 @@ services:
       - ./src:/app/src
       - ./blog:/app/blog
       - ./package.json:/app/package.json
+      - ./yarn.lock:/app/yarn.lock
+      - ./gatsby-browser.js:/app/gatsby-browser.js
+      - ./gatsby-config.js:/app/gatsby-config.js
+      - ./postcss.config.js:/app/postcss.config.js
+      - ./tailwind.config.js:/app/tailwind.config.js
     ports:
       - "8000:8000"
