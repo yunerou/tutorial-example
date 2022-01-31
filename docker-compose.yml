@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  gatsby:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: dev
+    volumes:
+      - ./src:/app/src
+      - ./blog:/app/blog
+      - ./package.json:/app/package.json
+    ports:
+      - "8000:8000"
